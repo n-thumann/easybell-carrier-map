@@ -36,3 +36,5 @@ Clone this repository, run `npm install`, run `npm run serve` to start the local
 Actually, I didn't build this to map Easybells carriers at all, but to visualize where 1&1 Versatel Layer 2 bitstream access is available. While playing around with Easybells availability API, I noticed that it also returns the carrier used, e.g. 1&1 Versatel.
 My assumption is that in regions where 1&1 Versatel provides service to Easybell, they have L2-BSA available, which is in turn used for their own products (e.g. 1&1 DSL for consumers). I was able to confirm this assumption in multiple regions using e.g. RIPE Atlas nodes.
 Because picking addresses at random and running e.g. `curl -s "https://www.easybell.de/api/provider-availabilities/TAL?exact_address=false&zip_code=49074&city=Osnabrück&street=Domhof&house_number=10" | jq -r ".results[0].carrier"` was a bit boring and lacked visualization, I built this project.
+
+# Foo!
