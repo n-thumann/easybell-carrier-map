@@ -10,7 +10,7 @@ A map showing the carriers used by Easybell for their VDSL products
 
 ## Usage
 
-Open https://n-thumann.github.io/easybell-carrier-map/, select area, wait, done.
+Open [map](https://n-thumann.github.io/easybell-carrier-map/), click to select area, wait, done.
 
 ## Running locally
 
