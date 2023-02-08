@@ -111,12 +111,14 @@ class Map {
   public registerDrawCallback(callback: (selection: Selection) => void) {
     this.map.on("draw.create", (event) => {
       const coordinates = event.features[0].geometry.coordinates[0];
+      const longitudes = coordinates.map((coordinate: number[]) => coordinate[0]);
+      const latitudes = coordinates.map((coordinate: number[]) => coordinate[1]);
 
       const selection = new Selection(
-        coordinates[2][1],
-        coordinates[0][0],
-        coordinates[0][1],
-        coordinates[1][0]
+        Math.min(...latitudes),
+        Math.min(...longitudes),
+        Math.max(...latitudes),
+        Math.max(...longitudes)
       );
       callback(selection);
     });
