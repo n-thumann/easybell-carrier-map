@@ -9,6 +9,7 @@ const carriers: { [key: string]: Carrier } = {
   DTAG: new Carrier("Deutsche Telekom AG", "#e20074"),
   "1U1": new Carrier("1&1", "#003d8f"),
   VCN: new Carrier("Vitroconnect", "#009fe3"),
+  ERROR: new Carrier("Error", "#000000"),
 };
 
 export {
