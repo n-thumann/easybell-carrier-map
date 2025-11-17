@@ -34,7 +34,13 @@ class EasyBell {
         return await this.getCarrierFromAddress(location, urlPrefix);
       }
       case 200: {
-        const providerAvailabilities = (await response.json()) as ProviderAvailabilities;
+        const content = await response.json();
+
+        if (content.code == 492) {
+          throw new Error("Blocked by EasyBell API");
+        }
+
+        const providerAvailabilities = content as ProviderAvailabilities;
         const results = providerAvailabilities.results.filter((result) => result.line == "vdsl");
 
         return results[0]?.carrier || null;
