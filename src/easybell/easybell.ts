@@ -46,8 +46,15 @@ class EasyBell {
   }
 
   public static async getCarrier(locations: Location[], urlPrefix?: string) {
+    let errors = 0;
     for (const location of locations) {
-      const carrier = await this.getCarrierFromAddress(location, urlPrefix);
+      let carrier;
+      try {
+        carrier = await this.getCarrierFromAddress(location, urlPrefix);
+      } catch (error) {
+        errors++;
+        continue;
+      }
 
       if (!carrier) {
         console.debug(`Could not find carrier for ${location}`);
@@ -65,6 +72,12 @@ class EasyBell {
       console.info(`Found carrier ${locationResult}`);
       return locationResult;
     }
+
+    if (locations.length === errors) {
+      console.debug(`Got errors for all locations`);
+      return new LocationResult(carriers.ERROR, locations[0]);
+    }
+
     return null;
   }
 }
