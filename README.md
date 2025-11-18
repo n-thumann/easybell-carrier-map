@@ -26,6 +26,14 @@ Clone this repository, run `npm install`, run `npm run serve` to start the local
 6. Query Easybell availability API for every address in hexagon until a carrier has been found
 7. Color hexagons on map based on carrier
 
+### Color Key
+
+<span style="color:#e20074">**Deutsche Telekom AG**</span> <br />
+<span style="color:#003d8f">**1&1 / Versatel GmbH**</span> <br />
+<span style="color: #009fe3">**vitroconnect GmbH**</span>
+
+
+
 ## Quirks
 
 - Not every address, especially in more rural areas, is available in OpenStreetMap. This can result in Overpass not returning any addresses for a hexagon, even though there are buildings in there.
