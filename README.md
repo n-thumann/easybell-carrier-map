@@ -12,6 +12,12 @@ A map showing the carriers used by Easybell for their VDSL products
 
 Open [map](https://n-thumann.github.io/easybell-carrier-map/), click to select area, wait, done.
 
+### Carriers
+
+- Deutsche Telekom AG (`#e20074`)
+- 1&1 (`#003d8f`)
+- Vitroconnect (`#009fe3`)
+
 ## Running locally
 
 Clone this repository, run `npm install`, run `npm run serve` to start the local development server or `npm run build` to build for production.
@@ -25,14 +31,6 @@ Clone this repository, run `npm install`, run `npm run serve` to start the local
 5. Sort addresses within each hexagon based on their distance to the hexagon's center (ascending distance)
 6. Query Easybell availability API for every address in hexagon until a carrier has been found
 7. Color hexagons on map based on carrier
-
-### Color Key
-
-<span style="color:#e20074">**Deutsche Telekom AG**</span> <br />
-<span style="color:#003d8f">**1&1 / Versatel GmbH**</span> <br />
-<span style="color: #009fe3">**vitroconnect GmbH**</span>
-
-
 
 ## Quirks
 
