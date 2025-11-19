@@ -14,9 +14,9 @@ Open [map](https://n-thumann.github.io/easybell-carrier-map/), click to select a
 
 ### Carriers
 
-- Deutsche Telekom AG (`#e20074`)
-- 1&1 (`#003d8f`)
-- Vitroconnect (`#009fe3`)
+- Deutsche Telekom AG (![#e20074](https://placehold.co/10x10/e20074/e20074/png))
+- 1&1 (![#003d8f](https://placehold.co/10x10/003d8f/003d8f/png))
+- Vitroconnect (![#009fe3](https://placehold.co/10x10/009fe3/009fe3/png))
 
 ## Running locally
 
