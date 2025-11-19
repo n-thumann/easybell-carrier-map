@@ -12,6 +12,12 @@ A map showing the carriers used by Easybell for their VDSL products
 
 Open [map](https://n-thumann.github.io/easybell-carrier-map/), click to select area, wait, done.
 
+### Carriers
+
+- Deutsche Telekom AG (![#e20074](https://placehold.co/10x10/e20074/e20074/png))
+- 1&1 (![#003d8f](https://placehold.co/10x10/003d8f/003d8f/png))
+- Vitroconnect (![#009fe3](https://placehold.co/10x10/009fe3/009fe3/png))
+
 ## Running locally
 
 Clone this repository, run `npm install`, run `npm run serve` to start the local development server or `npm run build` to build for production.
