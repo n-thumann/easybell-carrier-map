@@ -28,10 +28,12 @@ class Map {
   private pendingAnimationInterval = 0;
 
   public constructor() {
-    const mode = window?.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const style = window?.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark-matter"
+      : "positron";
     this.map = new MapLibreMap({
       container: "map",
-      style: `https://api.maptiler.com/maps/streets-v2-${mode}/style.json?key=TnKpKZ6zV8htrWMvdgp2`,
+      style: `https://tiles.basemaps.cartocdn.com/gl/${style}-gl-style/style.json`,
       center: [8.04454, 52.274962],
       zoom: 14.9,
       maxZoom: 18,
