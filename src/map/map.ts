@@ -32,7 +32,9 @@ class Map {
 
     this.map = new MapLibreMap({
       container: "map",
-      style: `https://tiles.basemaps.cartocdn.com/gl/${darkMode ? 'dark-matter' : 'positron'}-gl-style/style.json`,
+      style: `https://tiles.basemaps.cartocdn.com/gl/${
+        darkMode ? "dark-matter" : "positron"
+      }-gl-style/style.json`,
       center: [8.04454, 52.274962],
       zoom: 14.9,
       maxZoom: 18,
