@@ -28,18 +28,28 @@ class Map {
   private pendingAnimationInterval = 0;
 
   public constructor() {
-    const style = window?.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark-matter"
-      : "positron";
+    const darkMode = window?.matchMedia("(prefers-color-scheme: dark)").matches;
+
     this.map = new MapLibreMap({
       container: "map",
-      style: `https://tiles.basemaps.cartocdn.com/gl/${style}-gl-style/style.json`,
+      style: `https://tiles.basemaps.cartocdn.com/gl/${darkMode ? 'dark-matter' : 'positron'}-gl-style/style.json`,
       center: [8.04454, 52.274962],
       zoom: 14.9,
       maxZoom: 18,
       minZoom: 6,
       attributionControl: false,
     });
+
+    // Adjust dark-matter to look more like the previous MapTiler streets-v2-dark style
+    if (darkMode) {
+      this.map.on("styledata", () => {
+        this.map.getStyle().layers.forEach((layer) => {
+          if (layer.type === "line") {
+            this.map.setPaintProperty(layer.id, "line-color", "#3a3a3a");
+          }
+        });
+      });
+    }
 
     this.popup = new Popup({
       closeButton: false,
